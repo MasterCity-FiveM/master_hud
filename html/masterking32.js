@@ -38,14 +38,30 @@ window.addEventListener('message', function (event) {
 	if (data.health != -100){
 		Health.set(Math.round(data.health));
 	}else if(data.health == -100){
-		$('.Health').html("0")
 		Health.set(0);
 	}
 	
 	if (data.InCar) {
 		$('.currentSpeed').html(data.speed);
 		$('.speed').show();
+		
+		if (data.seat) {
+			$('.seatOn').show();
+			$('.seatOff').hide();
+		} else {
+			$('.seatOn').hide();
+			$('.seatOff').show();
+		}
+	
+		if (data.speedwarn) {
+			$('.SpeedWarn').show();
+		} else {
+			$('.SpeedWarn').hide();
+		}
 	} else {
 		$('.speed').hide();
+		$('.seatOn').hide();
+		$('.seatOff').hide();
+		$('.SpeedWarn').hide();
 	}
 });

@@ -10,7 +10,7 @@
 }
 
 .insideWatch{
-	margin-top: 25px;
+	margin-top: 15px;
 	text-align: center;
 	width: 100%;
 }
@@ -31,7 +31,7 @@
    letter-spacing: 5px;
    user-select: none;
    font-size: 1rem;
-   margin-bottom: 8px;
+   margin-bottom: 5px;
 }
 
 .speed {
@@ -41,5 +41,10 @@
    color: #fff;
    user-select: none;
    font-size: 12px;
-   margin-top: 15px;
+   margin-top: 10px;
+}
+
+.carIcons img{
+	margin-top: 5px;
+	max-height: 20px;
 }
