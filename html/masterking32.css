@@ -1,0 +1,45 @@
+.UI {
+	position: absolute;
+	right: 1%;
+	bottom: 1%;
+	background: url('bg.png') no-repeat 100% 100%;
+	width: 170px;
+	height: 193px;
+	text-align: center;
+	display: none;
+}
+
+.insideWatch{
+	margin-top: 25px;
+	text-align: center;
+	width: 100%;
+}
+
+.ldBar-label{
+	display: none;
+}
+@font-face {
+  font-family: 'clockf';
+  src: url(Quicksand-Light.ttf);
+}
+
+.clock {
+   font-family: clockf;
+   text-align: center;
+   text-shadow: 0 0 6px #000;
+   color: #fff;
+   letter-spacing: 5px;
+   user-select: none;
+   font-size: 1rem;
+   margin-bottom: 8px;
+}
+
+.speed {
+   font-family: clockf;
+   text-align: center;
+   text-shadow: 0 0 6px #000;
+   color: #fff;
+   user-select: none;
+   font-size: 12px;
+   margin-top: 15px;
+}
