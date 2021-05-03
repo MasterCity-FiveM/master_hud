@@ -29,8 +29,14 @@ function check(t){
 
 window.addEventListener('message', function (event) {
     let data = event.data;
-	$('.UI').show();
 	
+	if(event.data.show == true)
+	{
+		$('.UI').show();
+	} else {
+		$('.UI').hide();
+	}
+		
 	Armor.set(Math.round(data.armour));
 	food.set(Math.round(data.food));
 	thirst.set(Math.round(data.thirst));

@@ -5,6 +5,7 @@ local isCarSeatRuned = false
 local SeatBeltOn = false
 local speedBuffer = {}
 local velBuffer = {}
+local showUI = true
 
 Citizen.CreateThread(function()
     while ESX == nil do
@@ -66,6 +67,7 @@ Citizen.CreateThread(function()
 			InCar = IsInCar,
 			speed = speed,
 			seat = SeatBeltOn,
+			show = showUI,
 			speedwarn = speedwarn
         })
     end
@@ -136,3 +138,13 @@ function Fwv(entity)
 	hr = hr * 0.0174533
 	return { x = math.cos(hr) * 2.0, y = math.sin(hr) * 2.0 }
 end
+
+TriggerEvent('chat:addSuggestion', '/togglehud', 'Toggle UI', {})
+RegisterCommand('togglehud', function(source, args, raw)
+	showUI = not showUI
+end)
+
+TriggerEvent('chat:addSuggestion', '/toggleui', 'Toggle UI', {})
+RegisterCommand('toggleui', function(source, args, raw)
+	showUI = not showUI
+end)
