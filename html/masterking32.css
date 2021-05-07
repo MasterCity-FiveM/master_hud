@@ -3,10 +3,11 @@
 	right: 1%;
 	bottom: 1%;
 	background: url('bg.png') no-repeat 100% 100%;
-	width: 170px;
-	height: 193px;
+	width: 150px;
+	height: 170px;
 	text-align: center;
-	display: none;
+	/**display: none;**/
+	opacity: 0.8;
 }
 
 .insideWatch{
@@ -30,7 +31,7 @@
    color: #fff;
    letter-spacing: 5px;
    user-select: none;
-   font-size: 1rem;
+   font-size: 0.8rem;
    margin-bottom: 5px;
 }
 
