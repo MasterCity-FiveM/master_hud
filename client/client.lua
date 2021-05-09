@@ -124,11 +124,11 @@ AddEventHandler('master_keymap:l', function()
 	if SeatBeltOn then
 		SeatBeltOn = false
 		exports.pNotify:SendNotification({text = "کمربند ایمنی باز شد.", type = "error", timeout = 4000})
-		TriggerServerEvent('InteractSound_SV:PlayOnSource', 'unbuckle', 0.9)
+		TriggerServerEvent('InteractSound_SV:PlayOnSource', 'unbuckle', 0.3)
 	else
 		SeatBeltOn = true
 		exports.pNotify:SendNotification({text = "کمربند ایمنی بسته شد.", type = "success", timeout = 4000})
-		TriggerServerEvent('InteractSound_SV:PlayOnSource', 'buckle', 0.9)
+		TriggerServerEvent('InteractSound_SV:PlayOnSource', 'buckle', 0.3)
 	end
 end)
 
