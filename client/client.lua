@@ -132,6 +132,16 @@ AddEventHandler('master_keymap:l', function()
 	end
 end)
 
+
+RegisterNetEvent('master_hud:CloseSeatBelt')
+AddEventHandler('master_hud:CloseSeatBelt', function() 
+	if not IsPedSittingInAnyVehicle(PlayerPedId()) then
+		return
+	end
+	
+	SeatBeltOn = true
+end)
+
 function Fwv(entity)
 	local hr = GetEntityHeading(entity) + 90.0
 	if hr < 0.0 then hr = 360.0 + hr end
