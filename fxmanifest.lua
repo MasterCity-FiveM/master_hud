@@ -2,7 +2,7 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description 'MasterkinG32 HUD'
+description 'MasterkinG32 HUD (Discord: MasterkinG32#9999) - (MasterCity.iR)'
 
 version '1.0.0'
 
