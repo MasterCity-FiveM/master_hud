@@ -32,7 +32,7 @@ end
 
 Citizen.CreateThread(function()
     while true do 
-        Citizen.Wait(1000)
+        Citizen.Wait(0)
 		
         local IsInCar = false
 		local speed = 0
@@ -70,6 +70,12 @@ Citizen.CreateThread(function()
 			show = showUI,
 			speedwarn = speedwarn
         })
+		
+		if IsInCar == false then
+			Citizen.Wait(1000)
+		else
+			Citizen.Wait(100)
+		end
     end
 end)
 
