@@ -127,6 +127,12 @@ AddEventHandler('master_keymap:l', function()
 		return
 	end
 	
+	local pedVehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+	
+	if not IsCarSeatSupport(pedVehicle) then
+		return
+	end
+	
 	if SeatBeltOn then
 		SeatBeltOn = false
 		exports.pNotify:SendNotification({text = "کمربند ایمنی باز شد.", type = "error", timeout = 4000})
